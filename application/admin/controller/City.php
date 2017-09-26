@@ -13,33 +13,32 @@ class City extends Controller
  	 * @author Ethan
 	 * @desc 生活服务类一级分类显示显示
  	*/
-    public function index()
-    {
+   	 public function index()
+    	{
 		$parent_id = input('get.parent_id',0,'intval');
 		//获取数据
 		$citys = $this->obj->getFirstCitys($parent_id);
 //		print_r($citys);exit;
 		return $this->fetch('',
 				['citys' => $citys,]);
-    }
+    	}
 	/**
  	 * @author Ethan
 	 * @desc 生活服务类添加分类
  	*/
-    public function add()
-    {
-    	$citys = $this->obj->getNormalFirstCitys();
-    	
+    	public function add()
+    	{
+    		$citys = $this->obj->getNormalFirstCitys();
 		return $this->fetch('',['citys' => $citys,]);
-    }
+   	 }
 	
 	
-    /**
+   	 /**
  	 * @author Ethan
 	 * @desc 添加分类保存
  	*/
-    public function save()
-    {
+    	public function save()
+    	{
 //		print_r($_POST);
 //		print_r(input('post.'));
 //		print_r(request()->post());
@@ -61,22 +60,22 @@ class City extends Controller
 		}else{
 			$this->error('分类添加失败');
 		}
-    }
+    	}
     
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 编辑时更新
  	*/
-    public function update($data){
+    	public function update($data){
 		 $res = $this->obj->save($data,['id' => intval($data['id'])]);   	
 		 if($res){
 		 	$this->success("更新成功");
 		 }else{
 		 	$this->error("更新失败");
 		 }
-    }
+    	}
 
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 编辑排序
  	*/
