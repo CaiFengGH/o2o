@@ -13,9 +13,9 @@ class BisLocation extends BaseModel
             'bis_id' => $bisId,
             'status' => 1,
         ];
-		$order = [
-			'id'=>'desc',
-		];
+	$order = [
+		'id'=>'desc',
+	];
         $res = $this->where($data)
             ->order($order)
             ->select();
