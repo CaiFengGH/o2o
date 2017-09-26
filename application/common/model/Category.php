@@ -7,7 +7,7 @@ class Category extends Model
 	//与database.php中有相同的设置
 	protected $autoWriteTimestamp = true;
    
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 添加分类保存
  	*/	
@@ -18,7 +18,7 @@ class Category extends Model
 		return $res;
 	}
 	
-    /**
+   	 /**
  	 * @author Ethan
 	 * @desc 添加分类时的一级分类显示
  	*/	
@@ -38,7 +38,7 @@ class Category extends Model
 			->select();
 	}
 	
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 生活服务类的排序显示
  	*/	
