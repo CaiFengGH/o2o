@@ -13,31 +13,30 @@ class Category extends Controller
  	 * @author Ethan
 	 * @desc 生活服务类一级分类显示显示
  	*/
-    public function index()
-    {
+    	public function index()
+    	{
 		$parent_id = input('get.parent_id',0,'intval');
 		//获取数据
 		$categorys = $this->obj->getFirstCategorys($parent_id);
 		return $this->fetch('',
 				['categorys' => $categorys,]);
-    }
+    	}
 	/**
  	 * @author Ethan
 	 * @desc 生活服务类添加分类
  	*/
-    public function add()
-    {
-    	$categorys = $this->obj->getNormalFirstCategorys();
-    	
+    	public function add()
+    	{
+    		$categorys = $this->obj->getNormalFirstCategorys();
 		return $this->fetch('',['categorys' => $categorys,]);
-    }
+    	}
 	
 	/**
  	 * @author Ethan
 	 * @desc 生活服务类编辑
  	*/
-    public function edit($id = 0)
-    {
+    	public function edit($id = 0)
+    	{
 //		echo input('get.id');
 
 		//获取此id的分类
@@ -45,20 +44,20 @@ class Category extends Controller
 //		print_r ($category);exit;
  
 		//获取所有的一级分类
-    	$categorys = $this->obj->getNormalFirstCategorys();
+    		$categorys = $this->obj->getNormalFirstCategorys();
 				
 		//填充到模板中
 		return $this->fetch('',[
 			'categorys' => $categorys,
 			'category' => $category,
 		]);
-    }
-    /**
+    	}
+    	/**
  	 * @author Ethan
 	 * @desc 添加分类保存
  	*/
-    public function save()
-    {
+    	public function save()
+    	{
 //		print_r($_POST);
 //		print_r(input('post.'));
 //		print_r(request()->post());
@@ -86,22 +85,22 @@ class Category extends Controller
 		}else{
 			$this->error('分类添加失败');
 		}
-    }
+    	}
     
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 编辑时更新
  	*/
-    public function update($data){
+    	public function update($data){
 		 $res = $this->obj->save($data,['id' => intval($data['id'])]);   	
 		 if($res){
 		 	$this->success("更新成功");
 		 }else{
 		 	$this->error("更新失败");
 		 }
-    }
+    	}
 
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 编辑排序
  	*/
