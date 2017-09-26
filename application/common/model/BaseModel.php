@@ -7,7 +7,7 @@ class BaseModel extends Model
 	//自动添加起时间戳
 	protected $autoWriteTimestamp = true;
 	
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 商户入驻时的入库
  	*/	
