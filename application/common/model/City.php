@@ -5,7 +5,7 @@ use think\Model;
 class City extends Model
 {
 	protected $autoWriteTimestamp = true;
-    /**
+    	/**
  	 * @author Ethan
 	 * @desc 商户注册时城市显示
  	*/	
@@ -26,18 +26,17 @@ class City extends Model
 	 * @desc 团购列表时的
  	*/	
  	 public function getNormalCitys() {
-        $data = [
-            'status' => 1,
-            'parent_id' => ['gt', 0],
-        ];
+		$data = [
+		    'status' => 1,
+		    'parent_id' => ['gt', 0],
+		];
 
-        $order = ['id'=>'desc'];
+		$order = ['id'=>'desc'];
 
-        return $this->where($data)
-            ->order($order)
-            ->select();
-
-    }
+		return $this->where($data)
+		    ->order($order)
+		    ->select();
+	}
 
  	/**
  	 * @author Ethan
