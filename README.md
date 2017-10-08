@@ -28,4 +28,4 @@
 
 1、后台：http://o2o.caifeng.com:8080/index.php/admin/
 
-2、商户：http:o2o.caifeng.com:8080/index.php/bis/
+2、商户：http://o2o.caifeng.com:8080/index.php/bis/
