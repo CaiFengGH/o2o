@@ -23,3 +23,9 @@
 3、使用phpmailer邮件机制，为商户传递消息邮件
 
 4、使用uploadify图片上传机制
+
+>访问路径
+
+1、后台：http://o2o.caifeng.com:8080/index.php/admin/
+
+2、商户：http:o2o.caifeng.com:8080/index.php/bis/
